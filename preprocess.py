@@ -82,21 +82,16 @@ def slic_data(data, segments, max_pixel_num, location):
     for idx in tqdm(list(location)):
         temp = np.float32(np.zeros([max_pixel_num, BAND]))
         i, j = idx
-        pixel_location = np.array([i, j])
         num = segments[i, j]
         pixel_idx = np.where(segments == num)
-        
-        pixel_idx = np.array(pixel_idx)
-        pixel_idx = pixel_idx.T
-        idx_temp = []
-        for loc in pixel_idx:
-            if np.array_equal(loc, pixel_location) != True :
-                idx_temp.append(loc)
-        idx_temp = np.array(idx_temp)
-        data_temp = data[idx_temp[:, 0], idx_temp[:, 1],:]
-        data_temp = data_temp.reshape(-1, BAND)
-        temp[0, :] = data[i, j, :]
-        temp[1 : data_temp.shape[0] + 1, :] = data_temp
+
+        data_temp = data[pixel_idx]
+        pixel = data[i, j].reshape(1, -1)
+        matching_indices = np.where(np.all(data_temp == pixel, axis=1))[0]
+        pixel_temp = data_temp[0, :]
+        data_temp[0, :] = data_temp[matching_indices, :]
+        data_temp[matching_indices, :] = pixel_temp
+        temp[0:data_temp.shape[0], :] = data_temp
              
         slic_data.append(temp)
         

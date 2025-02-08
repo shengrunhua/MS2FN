@@ -162,6 +162,8 @@ class MS2FN(nn.Module):
         return y
     
 def sim(data, device):
+    data_s = torch.sum(data, dim=2)
+    index = torch.where(data_s == 0)
     tile_data = torch.unsqueeze(data, dim=1)
     next_data = torch.unsqueeze(data, dim=-2)
     minus = tile_data - next_data
@@ -169,5 +171,7 @@ def sim(data, device):
     simx = torch.exp(a/data.shape[2])
     simx = simx / torch.sum(simx, 2, keepdims=True)
     simx = simx + torch.eye(data.shape[1]).to(device)
+    simx[index[0], index[1], :] = 0
+    simx[index[0], :, index[1]] = 0
     
     return simx

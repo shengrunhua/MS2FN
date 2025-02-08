@@ -58,7 +58,7 @@ def LDA_operation(data,label):
     lda=LDA()
     lda.fit(x,y-1)
     data=lda.transform(data)
-    print('LDA降维完成')
+    print('LDA Finished.')
     
     return data.reshape(H, W, -1)
 

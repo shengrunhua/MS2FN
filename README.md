@@ -4,7 +4,7 @@
 ![image](https://github.com/shengrunhua/MS2FN/blob/main/Overview%20of%20proposed%20MS2FN.png)
 ## Hongmin Gao, Runhua Sheng, Yuanchao Su, Zhonghao Chen, Shufang Xu and Lianru Gao
 ----------
-The code for the network and the code for preprocessing are released. The code is based on PyTorch 2.0.1.
+The code for the network and the code for data preprocessing are released. The code is based on PyTorch 2.0.1.
 ## Contact Information
 ----------
 Runhua Sheng: shengrunhua@hhu.edu.cn

@@ -12,12 +12,9 @@ class mish(nn.Module):
 class MS2FN(nn.Module):
     def __init__(self, S, l1, l2, class_num, hidden, max_pixel_num1, max_pixel_num2, device):
         super(MS2FN, self).__init__()
-        self.S = S
         self.l1 = l1
         self.l2 = l2
         self.device = device
-        
-        self.hidden = int(hidden)
         
         self.spectral = nn.Sequential(nn.Conv2d(S, hidden * 2, (1, 1)),
                                     nn.BatchNorm2d(hidden * 2),

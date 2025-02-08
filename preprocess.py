@@ -30,7 +30,7 @@ def patch_data(data,l,location):
     return patch_data
 
 
-def dist_mask(data,device,mode='Pre'):
+def dist_mask(data,device):
     data = torch.tensor(data)
     data = data.to(device)
     data_s = torch.sum(data, dim=2)

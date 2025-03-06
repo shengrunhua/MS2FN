@@ -87,7 +87,7 @@ def slic_data(data, segments, max_pixel_num, location):
 
         data_temp = data[pixel_idx]
         pixel = data[i, j].reshape(1, -1)
-        matching_indices = np.where(np.all(data_temp == pixel, axis=1))[0]
+        matching_indices = np.where(np.all(data_temp == pixel, axis=1))[0][0]
         pixel_temp = data_temp[0, :]
         data_temp[0, :] = data_temp[matching_indices, :]
         data_temp[matching_indices, :] = pixel_temp

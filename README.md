@@ -9,4 +9,4 @@ https://doi.org/10.1109/TIP.2025.3611146
 The code for the network and data preprocessing has been released. It is based on PyTorch 2.0.1.
 ## Contact Information
 ----------
-Runhua Sheng: shengrunhua@hhu.edu.cn
+Runhua Sheng: shengrunhua@whu.edu.cn

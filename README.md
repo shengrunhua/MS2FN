@@ -1,6 +1,6 @@
 # Multiscale Segmentation-Guided Fusion Network for Hyperspectral Image Classification
 
-Published in IEEE Transactions on Image Processing
+Published in IEEE Transactions on Image Processing, vol. 34, pp. 6152-6167, 2025
 
 https://doi.org/10.1109/TIP.2025.3611146
 

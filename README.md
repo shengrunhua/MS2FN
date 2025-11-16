@@ -14,11 +14,11 @@ The code provided in this repository uses the Indian Pines dataset as an example
 
 ## `main.py`
 
-`main.py` is used for training and testing the classification model.
+`main.py` is used for training and test the classification model.
 
-- Handles data loading, model construction, training and test.
+- Handles data preprocessing, model construction, training and test.
 
-- Training settings and hyperparameters can be configured through `main.py`.
+- Training settings and hyperparameters can be configured through `main.py` and `train.py`.
 
 ## `draw.py`
 

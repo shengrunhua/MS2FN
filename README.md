@@ -48,6 +48,7 @@ The project has been tested with the following package versions:
 
 If you find this code useful for your research, please consider citing our paper:
 
+```Bibtex
 @ARTICLE{11176912,
   
   author={Gao, Hongmin and Sheng, Runhua and Su, Yuanchao and Chen, Zhonghao and Xu, Shufang and Gao, Lianru},
@@ -67,6 +68,7 @@ If you find this code useful for your research, please consider citing our paper
   keywords={Feature extraction;Convolution;Transformers;Image segmentation;Shape;Hyperspectral imaging;Data mining;Kernel;Accuracy;Image classification;Convolution neural network (CNN);graph convolution network (GCN);multiscale;hyperspectral image (HSI) classification},
   
   doi={10.1109/TIP.2025.3611146}}
+```
 
 ----------
 # Contact Information

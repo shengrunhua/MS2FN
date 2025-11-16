@@ -10,6 +10,7 @@ https://doi.org/10.1109/TIP.2025.3611146
 ----------
 The source code has been released. It is based on PyTorch 2.0.1.
 # Files Description
+----------
 ## `main.py`
 
 `main.py` is used for training and testing the classification model.
@@ -26,6 +27,6 @@ The source code has been released. It is based on PyTorch 2.0.1.
 
 - Generates classification maps based on the model predictions.
 
-## Contact Information
+# Contact Information
 ----------
 Runhua Sheng: shengrunhua@whu.edu.cn

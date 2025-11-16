@@ -27,6 +27,22 @@ The source code has been released. It is based on PyTorch 2.0.1.
 
 - Generates classification maps based on the model predictions.
 
+# Environment Requirements
+----------
+The project has been tested with the following package versions:
+
+- Python 3.9+
+- PyTorch 2.8.0+cu129
+- torchvision 1.8.0
+- numpy 2.1.3
+- scipy 1.15.3
+- scikit_learn 1.6.1
+- scikit-image 0.25.0
+- matplotlib 3.10.0
+- thop 0.1.1.post2209072238
+- torchinfo 1.8.0
+- tqdm 4.67.1
+
 # Contact Information
 ----------
 Runhua Sheng: shengrunhua@whu.edu.cn

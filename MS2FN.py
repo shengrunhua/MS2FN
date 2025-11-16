@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from preprocess import dist_mask
 
 class mish(nn.Module):
     def __init__(self):
@@ -11,9 +12,12 @@ class mish(nn.Module):
 class MS2FN(nn.Module):
     def __init__(self, S, l1, l2, class_num, hidden, max_pixel_num1, max_pixel_num2, device):
         super(MS2FN, self).__init__()
+        self.S = S
         self.l1 = l1
         self.l2 = l2
         self.device = device
+        
+        self.hidden = int(hidden)
         
         self.spectral = nn.Sequential(nn.Conv2d(S, hidden * 2, (1, 1)),
                                     nn.BatchNorm2d(hidden * 2),
@@ -126,7 +130,7 @@ class MS2FN(nn.Module):
             x_s1 = self.sgbn1[i](x_s1)
             x_s1 = mish()(x_s1)
         
-        weight_s1 = sim(x_s1, self.device)
+        weight_s1 = dist_mask(x_s1, self.device, 'Model')
         x_s1p = torch.bmm(weight_s1, x_s1)
         x_s1 = x_s1p[:, 0, :]
         
@@ -143,7 +147,7 @@ class MS2FN(nn.Module):
             x_s2 = self.sgbn2[i](x_s2)
             x_s2 = mish()(x_s2)
         
-        weight_s2 = sim(x_s2, self.device)
+        weight_s2 = dist_mask(x_s2, self.device, 'Model')
         x_s2p = torch.bmm(weight_s2, x_s2)
         x_s2 = x_s2p[:, 0, :]
 
@@ -156,18 +160,3 @@ class MS2FN(nn.Module):
         y = self.output(x)
         
         return y
-    
-def sim(data, device):
-    data_s = torch.sum(data, dim=2)
-    index = torch.where(data_s == 0)
-    tile_data = torch.unsqueeze(data, dim=1)
-    next_data = torch.unsqueeze(data, dim=-2)
-    minus = tile_data - next_data
-    a = -torch.sum(minus**2, -1)
-    simx = torch.exp(a/data.shape[2])
-    simx = simx / torch.sum(simx, 2, keepdims=True)
-    simx = simx + torch.eye(data.shape[1]).to(device)
-    simx[index[0], index[1], :] = 0
-    simx[index[0], :, index[1]] = 0
-    
-    return simx

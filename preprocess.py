@@ -1,5 +1,4 @@
 from scipy.io import loadmat
-import h5py
 import numpy as np
 from tqdm import tqdm
 import torch
@@ -202,4 +201,5 @@ def slic_data(data, segments, max_pixel_num, location):
     print('Data sliced.')
     slic_data = np.float32(np.array(slic_data))
     
+
     return slic_data

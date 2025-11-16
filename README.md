@@ -47,6 +47,7 @@ The project has been tested with the following package versions:
 # Citation
 
 If you find this code useful for your research, please consider citing our paper:
+
 @ARTICLE{11176912,
   author={Gao, Hongmin and Sheng, Runhua and Su, Yuanchao and Chen, Zhonghao and Xu, Shufang and Gao, Lianru},
   journal={IEEE Transactions on Image Processing}, 

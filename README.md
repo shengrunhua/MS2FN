@@ -48,6 +48,10 @@ The project has been tested with the following package versions:
 
 If you find this code useful for your research, please consider citing our paper:
 
+H. Gao, R. Sheng, Y. Su, Z. Chen, S. Xu and L. Gao, "Multiscale Segmentation-Guided Fusion Network for Hyperspectral Image Classification," in IEEE Transactions on Image Processing, vol. 34, pp. 6152-6167, 2025, doi: 10.1109/TIP.2025.3611146.
+
+keywords: {Feature extraction;Convolution;Transformers;Image segmentation;Shape;Hyperspectral imaging;Data mining;Kernel;Accuracy;Image classification;Convolution neural network (CNN);graph convolution network (GCN);multiscale;hyperspectral image (HSI) classification}
+
 ```Bibtex
 @ARTICLE{11176912,
   author={Gao, Hongmin and Sheng, Runhua and Su, Yuanchao and Chen, Zhonghao and Xu, Shufang and Gao, Lianru},

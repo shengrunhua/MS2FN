@@ -10,6 +10,8 @@ https://doi.org/10.1109/TIP.2025.3611146
 ----------
 # Files Description
 
+The code provided in this repository uses the Indian Pines dataset as an example. You can replace it with your own dataset.
+
 ## `main.py`
 
 `main.py` is used for training and testing the classification model.
@@ -40,6 +42,22 @@ The project has been tested with the following package versions:
 - thop 0.1.1-2209072238
 - torchinfo 1.8.0
 - tqdm 4.67.1
+
+----------
+# Citation
+
+If you find this code useful for your research, please consider citing our paper:
+@ARTICLE{11176912,
+  author={Gao, Hongmin and Sheng, Runhua and Su, Yuanchao and Chen, Zhonghao and Xu, Shufang and Gao, Lianru},
+  journal={IEEE Transactions on Image Processing}, 
+  title={Multiscale Segmentation-Guided Fusion Network for Hyperspectral Image Classification}, 
+  year={2025},
+  volume={34},
+  number={},
+  pages={6152-6167},
+  keywords={Feature extraction;Convolution;Transformers;Image segmentation;Shape;Hyperspectral imaging;Data mining;Kernel;Accuracy;Image classification;Convolution neural network (CNN);graph convolution network (GCN);multiscale;hyperspectral image (HSI) classification},
+  doi={10.1109/TIP.2025.3611146}}
+
 ----------
 # Contact Information
 Runhua Sheng: shengrunhua@whu.edu.cn

@@ -7,9 +7,6 @@ https://doi.org/10.1109/TIP.2025.3611146
 ----------
 ![image](https://github.com/shengrunhua/MS2FN/blob/main/Overview%20of%20proposed%20MS2FN.png)
 ## Hongmin Gao, Runhua Sheng, Yuanchao Su, Zhonghao Chen, Shufang Xu and Lianru Gao
-
-The source code has been released.
-
 ----------
 # Files Description
 

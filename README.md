@@ -10,7 +10,7 @@ https://doi.org/10.1109/TIP.2025.3611146
 ----------
 The source code has been released. It is based on PyTorch 2.0.1.
 # Files Description
-----------
+
 ## `main.py`
 
 `main.py` is used for training and testing the classification model.
@@ -26,9 +26,8 @@ The source code has been released. It is based on PyTorch 2.0.1.
 - Automatically reads the specified checkpoint file.
 
 - Generates classification maps based on the model predictions.
-
-# Environment Requirements
 ----------
+# Environment Requirements
 The project has been tested with the following package versions:
 
 - Python 3.9+
@@ -42,7 +41,6 @@ The project has been tested with the following package versions:
 - thop 0.1.1.post2209072238
 - torchinfo 1.8.0
 - tqdm 4.67.1
-
-# Contact Information
 ----------
+# Contact Information
 Runhua Sheng: shengrunhua@whu.edu.cn

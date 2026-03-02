@@ -116,12 +116,6 @@ def dist_mask(data,device,mode='Pre'):
     dist[index[0], :, index[1]] = 0
     
     return dist
-
-def set_seed(seed):
-    random.seed(seed) # python的随机性
-    np.random.seed(seed) # np的随机性
-    torch.manual_seed(seed) # torch的CPU随机性，为CPU设置随机种子
-    torch.cuda.manual_seed_all(seed) # torch的GPU随机性，为所有GPU设置随机种子
     
 def train_split(labels_TR,labels_TE,train_ratio):
     class_num=np.max(labels_TR)
@@ -203,3 +197,4 @@ def slic_data(data, segments, max_pixel_num, location):
     
 
     return slic_data
+

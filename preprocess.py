@@ -9,7 +9,6 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 from skimage.segmentation import slic
 
 def loadData(Data):
-    # 读入数据
     if Data == 'IP':
         data = loadmat('./data/Indian_pines_corrected.mat')['indian_pines_corrected']
         labels_TE = loadmat('./data/IP_TE_gt.mat')['y']
@@ -197,4 +196,5 @@ def slic_data(data, segments, max_pixel_num, location):
     
 
     return slic_data
+
 
